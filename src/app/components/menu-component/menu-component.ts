@@ -1,0 +1,19 @@
+import { Component } from '@angular/core';
+import { ToastService } from 'ngx-yet-another-toast-library';
+
+@Component({
+  selector: 'app-menu-component',
+  standalone: false,
+  styleUrl: './menu-component.css',
+  templateUrl: './menu-component.html',
+})
+export class MenuComponent {
+  constructor(
+    private _toast: ToastService
+  ) {}
+
+  cerrarSesion(): void {
+    localStorage.removeItem("TOKEN")
+    this._toast.info("Sesion de usuario cerrada")
+  }
+}

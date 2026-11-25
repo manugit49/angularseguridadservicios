@@ -1,0 +1,50 @@
+<div class="container mt-4">
+  @if (empleado) {
+    <div class="card">
+      <div class="card-header bg-primary text-white">
+        <h4 class="mb-0">Perfil del Empleado</h4>
+      </div>
+      <div class="card-body">
+        <div class="row mb-3">
+          <div class="col-md-3">
+            <strong class="text-muted">ID:</strong>
+          </div>
+          <div class="col-md-9">
+            {{ empleado.idEmpleado }}
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-md-3">
+            <strong class="text-muted">Apellido:</strong>
+          </div>
+          <div class="col-md-9">
+            {{ empleado.apellido }}
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-md-3">
+            <strong class="text-muted">Oficio:</strong>
+          </div>
+          <div class="col-md-9">
+            {{ empleado.oficio }}
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-md-3">
+            <strong class="text-muted">ID Departamento:</strong>
+          </div>
+          <div class="col-md-9">
+            {{ empleado.idDepartamento }}
+          </div>
+        </div>
+        <hr>
+        <div class="text-end">
+          <a routerLink="/empleados" class="btn btn-secondary">Volver al listado</a>
+        </div>
+      </div>
+    </div>
+  } 
+    <div class="alert alert-info text-center">
+      Cargar perfil...
+    </div>
+</div>

@@ -1,0 +1,51 @@
+<div class="container">
+  <div class="row justify-content-center mt-5">
+    <div class="col-md-6 col-lg-4">
+      <div class="card">
+        <div class="card-header bg-primary text-white text-center">
+          <h4 class="mb-0">Iniciar Sesión</h4>
+        </div>
+        <div class="card-body">
+          <div class="mb-3">
+            <label for="cajausuario" class="form-label">Usuario</label>
+            <input
+              type="text"
+              class="form-control"
+              id="cajausuario"
+              #cajausuario
+              placeholder="Ingrese su usuario"
+              autocomplete="username"
+            >
+          </div>
+
+          <div class="mb-3">
+            <label for="cajapassword" class="form-label">Contraseña</label>
+            <input
+              type="password"
+              class="form-control"
+              id="cajapassword"
+              #cajapassword
+              placeholder="Ingrese su contraseña"
+              autocomplete="current-password"
+            >
+          </div>
+
+          <div class="d-grid">
+            <button
+              type="button"
+              class="btn btn-primary"
+              (click)="validarUsuario()"
+            >
+              Iniciar Sesión
+              
+            </button>
+          </div>
+
+          <div class="alert alert-success mt-3 text-center">
+              {{ mensaje }}
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
